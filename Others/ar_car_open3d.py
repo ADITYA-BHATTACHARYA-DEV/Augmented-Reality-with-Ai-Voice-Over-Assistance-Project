@@ -724,7 +724,7 @@ except ImportError:
 CAM_W, CAM_H  = 1280, 720
 RENDER_W      = 640
 RENDER_H      = 480
-MODEL_PATH    = "car.obj"
+MODEL_PATH    = "../car.obj"
 OLLAMA_MODEL  = "llava-phi3"
 ARUCO_DICT    = cv2.aruco.DICT_6X6_250
 ARUCO_ID      = 0
@@ -1063,9 +1063,9 @@ class ArucoTracker:
         self.adict    = cv2.aruco.getPredefinedDictionary(ARUCO_DICT)
         self.detector = cv2.aruco.ArucoDetector(
             self.adict, cv2.aruco.DetectorParameters())
-        if not os.path.exists("aruco_marker.png"):
+        if not os.path.exists("../aruco_marker.png"):
             img = cv2.aruco.generateImageMarker(self.adict, ARUCO_ID, 300)
-            cv2.imwrite("aruco_marker.png", img)
+            cv2.imwrite("../aruco_marker.png", img)
             print("[ArUco] Marker saved → aruco_marker.png  (print or display it)")
 
     def detect(self, frame):

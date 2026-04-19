@@ -3,8 +3,8 @@ os.environ["OPEN3D_GUI_BACKEND"] = "GLFW"
 
 import cv2
 import numpy as np
-from gesture_engine import GestureEngine
-from ai_narrator    import AINarrator
+from Others.gesture_engine import GestureEngine
+from Others.ai_narrator import AINarrator
 
 # --- Init ---
 cap      = cv2.VideoCapture(0)
